@@ -120,6 +120,16 @@
     padding:4px 10px;
     font-size:.76rem;color:#7dd3fc;margin:3px 3px 0 0;
   }
+  .brand-row{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+  .brand-row:last-child{border-bottom:none}
+  .brand-icon{width:28px;height:28px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:6px;font-size:1rem}
+  .brand-icon img{width:22px;height:22px;object-fit:contain}
+  .brand-label{font-size:.84rem;color:#e2e8f0;font-weight:500}
+  .brand-sublabel{font-size:.72rem;color:#94a3b8}
+  .brand-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0}
+  .brand-cell{display:flex;align-items:center;gap:8px;padding:6px 8px;background:rgba(255,255,255,.04);border-radius:8px;border:1px solid rgba(255,255,255,.07)}
+  .brand-cell img{width:22px;height:22px;object-fit:contain}
+  .brand-cell span{font-size:.82rem;color:#e2e8f0;font-weight:500}
 
   /* arrows between sections */
   .arrow-right::after{
@@ -229,20 +239,34 @@
   <!-- TOP RIGHT: Platform & Workflow -->
   <div class="card right-stack" style="grid-column:3;grid-row:1">
     <div class="card-title">🖥️ Platform &amp; Workflow</div>
-    <div style="margin-bottom:10px">
-      <p style="font-size:.82rem;font-weight:600;color:#e2e8f0;margin-bottom:4px">samdesk platform</p>
-      <span class="integration-pill">Web App</span>
-      <span class="integration-pill">Mobile App</span>
+
+    <div class="brand-row">
+      <div class="brand-icon" style="background:#1a1a2e">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="#38d9a9"/></svg>
+      </div>
+      <div>
+        <div class="brand-label">samdesk platform</div>
+        <div class="brand-sublabel">Web &amp; Mobile app</div>
+      </div>
     </div>
-    <div style="margin-bottom:10px">
-      <span class="integration-pill">MS Teams</span>
-      <span class="integration-pill">Slack</span>
+
+    <div class="brand-row">
+      <div class="brand-icon" style="background:#6264a720">
+        <img src="https://cdn.simpleicons.org/microsoftteams/6264A7" alt="MS Teams"/>
+      </div>
+      <div class="brand-label">MS Teams</div>
     </div>
-    <div>
-      <span class="integration-pill">Email</span>
-      <span class="integration-pill">SMS</span>
-      <span class="integration-pill">API</span>
-      <span class="integration-pill">Webhooks</span>
+
+    <div class="brand-row">
+      <div class="brand-icon" style="background:#4A154B20">
+        <img src="https://cdn.simpleicons.org/slack/4A154B" alt="Slack" style="filter:brightness(2)"/>
+      </div>
+      <div class="brand-label">Slack</div>
+    </div>
+
+    <div class="brand-row">
+      <div class="brand-icon" style="background:#0ea5e920;font-size:.7rem;color:#7dd3fc;font-weight:700">API</div>
+      <div class="brand-label">Email / SMS / API / Webhooks</div>
     </div>
   </div>
 
@@ -267,18 +291,25 @@
   <!-- BOTTOM RIGHT: Security Stack -->
   <div class="card bottom-right">
     <div class="card-title">🔒 Security Stack Integrations</div>
-    <div class="tag-grid" style="margin-bottom:10px">
-      <div class="tag">🌐 ESRI</div>
-      <div class="tag">🔎 Ontic</div>
-      <div class="tag">📊 Advana</div>
-      <div class="tag">🧠 Palantir</div>
+    <div class="brand-grid">
+      <div class="brand-cell">
+        <img src="https://cdn.simpleicons.org/esri/007AC2" alt="ESRI"/>
+        <span>ESRI</span>
+      </div>
+      <div class="brand-cell">
+        <div style="width:22px;height:22px;border-radius:4px;background:#1e293b;display:flex;align-items:center;justify-content:center;font-size:.55rem;font-weight:700;color:#94a3b8;letter-spacing:-.5px">ONTIC</div>
+        <span>Ontic</span>
+      </div>
+      <div class="brand-cell">
+        <div style="width:22px;height:22px;border-radius:4px;background:#dc2626;display:flex;align-items:center;justify-content:center;font-size:.55rem;font-weight:700;color:#fff">ADV</div>
+        <span>Advana</span>
+      </div>
+      <div class="brand-cell">
+        <img src="https://cdn.simpleicons.org/palantir/ffffff" alt="Palantir"/>
+        <span>Palantir</span>
+      </div>
     </div>
-    <p style="font-size:.78rem;color:#94a3b8;margin-top:8px">Core systems:</p>
-    <div style="margin-top:4px">
-      <span class="integration-pill">HR</span>
-      <span class="integration-pill">Travel</span>
-      <span class="integration-pill">SSO</span>
-    </div>
+    <p style="font-size:.78rem;color:#94a3b8;margin-top:10px"><strong style="color:#e2e8f0">Core systems:</strong> HR, Travel, SSO</p>
   </div>
 
 </div><!-- /grid -->
